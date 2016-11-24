@@ -1,0 +1,30 @@
+body {
+    background-color: #000;
+}
+
+p {
+    color: #fff;
+    padding: 10px;
+}
+
+div {
+    width: 1200px;
+    margin: auto;
+}
+
+#projection-title {
+    margin: auto;
+    width: 300px;
+}
+
+#display {
+    background-color: #fff;
+    width: 1000px;
+    float: left;
+}
+
+#control {
+    width:200px;
+    box-sizing: border-box;
+    float: right;
+}
