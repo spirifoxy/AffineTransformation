@@ -2,9 +2,9 @@ body {
     background-color: #000;
 }
 
-p {
+p, span {
     color: #fff;
-    padding: 10px;
+    margin: 5px;
 }
 
 div {
@@ -12,7 +12,7 @@ div {
     margin: auto;
 }
 
-#projection-title {
+.title {
     margin: auto;
     width: 300px;
 }
@@ -25,6 +25,11 @@ div {
 
 #control {
     width:200px;
+    padding: 10px;
     box-sizing: border-box;
     float: right;
+}
+
+#control input {
+    margin: 5px;
 }

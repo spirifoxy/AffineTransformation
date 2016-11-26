@@ -1,26 +1,81 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Афинные преобразования</title>
+    <meta charset="utf-8">
+    <title>Афинные преобразования</title>
 
-	<link rel="stylesheet" type="text/css" href="css/style.css">	
-	<script type="text/javascript" src="js/design.js"></script>
-	<script type="text/javascript" src="js/transform.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/design.js"></script>
+    <script type="text/javascript" src="js/transform.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 
 </head>
 
 <body onload="init()">
-    <p id="projection-title"</p>
+    <div class="title">
+        <p id="projection-title">Проекция: перспективная</p>
+        <p id="rotation-title">Режим вращения: ручной</p>
+    </div>
     <div>
         <canvas id="display" width="1000" height="500"></canvas> 
-        <p id="control">
-        	Управление: <br>
-	        повороты по осям: <br>
-	        ws - X, ad - Y, qe - Z, 
-	        <br>пробел - смена цвета <br>
-        </p>
+        <div id="control">
+            <p>
+                Управление: <br>
+                повороты по осям: <br>
+                ws - X, ad - Y, qe - Z; <br>
+                пробел - смена цвета; <br>
+                В автоматическом режиме вращения управление осуществляется с помощью курсора
+            </p>
+            <input id="rotation-mode-btn" value="Режим вращения" type="button">
+            <input id="projection-btn" value="Тип проекции" type="button">
+
+
+            <div class="translate">
+                <span>Перенос: </span>
+                <div>
+                    <span>X </span>
+                    <input id="translate-x" type="range" min="-10" max="10" step="0.5" value="0">
+                </div>
+                <div>
+                    <span>Y </span>
+                    <input id="translate-y" type="range" min="-10" max="10" step="0.5" value="0">
+                </div>
+                <div>
+                    <span>Z </span>
+                    <input id="translate-z" type="range" min="-10" max="10" step="0.5" value="0">
+                </div>
+            </div>
+            
+
+            <div>
+                <span>Отражение: </span>
+                <input id="reflect-x" value="X" type="button">
+                <input id="reflect-y" value="Y" type="button">
+                <input id="reflect-z" value="Z" type="button">
+            </div>
+
+            <div>
+                <span>Сжатие: </span>
+                
+                <div>
+                    <span>X </span>
+                    <input id="scale-x-" value="-" type="button">
+                    <input id="scale-x+" value="+" type="button">
+                </div>
+
+                <div>
+                    <span>Y </span>
+                    <input id="scale-y-" value="-" type="button">
+                    <input id="scale-y+" value="+" type="button">
+                </div>
+
+                <div>
+                    <span>Z </span>
+                    <input id="scale-z-"    value="-" type="button">
+                    <input id="scale-z+"    value="+" type="button">
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
